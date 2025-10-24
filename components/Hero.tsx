@@ -37,13 +37,30 @@ const techIcons = [
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState("default");
+  const [windowSize, setWindowSize] = useState({ width: 1920, height: 1080 });
 
   useEffect(() => {
+    // Set actual window size on client
+    if (typeof window !== 'undefined') {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const mouseX = useMotionValue(0);
@@ -83,8 +100,8 @@ export default function Hero() {
             opacity: [0.15, 0.25, 0.15],
           }}
           style={{
-            x: useTransform(mouseX, [0, window.innerWidth], [-30, 30]),
-            y: useTransform(mouseY, [0, window.innerHeight], [-30, 30]),
+            x: useTransform(mouseX, [0, windowSize.width], [-30, 30]),
+            y: useTransform(mouseY, [0, windowSize.height], [-30, 30]),
           }}
           transition={{
             duration: 8,
@@ -101,8 +118,8 @@ export default function Hero() {
             opacity: [0.1, 0.2, 0.1],
           }}
           style={{
-            x: useTransform(mouseX, [0, window.innerWidth], [30, -30]),
-            y: useTransform(mouseY, [0, window.innerHeight], [30, -30]),
+            x: useTransform(mouseX, [0, windowSize.width], [30, -30]),
+            y: useTransform(mouseY, [0, windowSize.height], [30, -30]),
           }}
           transition={{
             duration: 10,
