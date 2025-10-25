@@ -19,19 +19,19 @@ import {
 } from "react-icons/si";
 import { HiSparkles } from "react-icons/hi";
 
-// Tech icons - Your Custom Tech Stack
+// Tech icons - Your Custom Tech Stack (optimized delays for faster load)
 const techIcons = [
   { Icon: SiSpringboot, color: "#6DB33F", name: "Spring Boot", delay: 0, size: 54 },
-  { Icon: FaJava, color: "#007396", name: "Java JEE", delay: 0.1, size: 56 },
-  { Icon: FaAngular, color: "#DD0031", name: "Angular", delay: 0.2, size: 54 },
-  { Icon: FaReact, color: "#61DAFB", name: "React", delay: 0.3, size: 54 },
-  { Icon: SiTypescript, color: "#3178C6", name: "TypeScript", delay: 0.4, size: 52 },
-  { Icon: SiFlutter, color: "#02569B", name: "Flutter", delay: 0.5, size: 54 },
-  { Icon: SiMysql, color: "#4479A1", name: "MySQL", delay: 0.6, size: 52 },
-  { Icon: SiMongodb, color: "#47A248", name: "MongoDB", delay: 0.7, size: 52 },
-  { Icon: SiPostgresql, color: "#4169E1", name: "PostgreSQL", delay: 0.8, size: 52 },
-  { Icon: SiJavascript, color: "#F7DF1E", name: "JavaScript", delay: 0.9, size: 52 },
-  { Icon: SiSap, color: "#0FAAFF", name: "SAP", delay: 1.0, size: 52 },
+  { Icon: FaJava, color: "#007396", name: "Java JEE", delay: 0.03, size: 56 },
+  { Icon: FaAngular, color: "#DD0031", name: "Angular", delay: 0.06, size: 54 },
+  { Icon: FaReact, color: "#61DAFB", name: "React", delay: 0.09, size: 54 },
+  { Icon: SiTypescript, color: "#3178C6", name: "TypeScript", delay: 0.12, size: 52 },
+  { Icon: SiFlutter, color: "#02569B", name: "Flutter", delay: 0.15, size: 54 },
+  { Icon: SiMysql, color: "#4479A1", name: "MySQL", delay: 0.18, size: 52 },
+  { Icon: SiMongodb, color: "#47A248", name: "MongoDB", delay: 0.21, size: 52 },
+  { Icon: SiPostgresql, color: "#4169E1", name: "PostgreSQL", delay: 0.24, size: 52 },
+  { Icon: SiJavascript, color: "#F7DF1E", name: "JavaScript", delay: 0.27, size: 52 },
+  { Icon: SiSap, color: "#0FAAFF", name: "SAP", delay: 0.3, size: 52 },
 ];
 
 export default function Hero() {
@@ -143,8 +143,8 @@ export default function Hero() {
           className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-gradient-to-tr from-blue-400/20 to-indigo-500/20 rounded-full blur-[110px]"
         />
 
-        {/* Subtle neuron-like particles moving slowly */}
-        {[...Array(20)].map((_, i) => {
+        {/* Subtle neuron-like particles moving slowly - REDUCED for performance */}
+        {[...Array(8)].map((_, i) => {
           const startX = Math.random() * 100;
           const startY = Math.random() * 100;
           const endX = Math.random() * 100;
@@ -168,21 +168,21 @@ export default function Hero() {
                 opacity: [0.2, 0.5, 0.2],
               }}
               transition={{
-                duration: Math.random() * 25 + 20,
+                duration: Math.random() * 15 + 10,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: Math.random() * 5,
+                delay: Math.random() * 2,
               }}
             />
           );
         })}
 
-        {/* Animated White Bubbles */}
-        {[...Array(15)].map((_, i) => {
+        {/* Animated White Bubbles - REDUCED for performance */}
+        {[...Array(6)].map((_, i) => {
           const size = Math.random() * 60 + 20; // 20-80px
           const startX = Math.random() * 100;
           const startY = 100 + Math.random() * 20; // Start below screen
-          const duration = Math.random() * 10 + 15; // 15-25s
+          const duration = Math.random() * 8 + 10; // 10-18s
           
           return (
             <motion.div
@@ -207,7 +207,7 @@ export default function Hero() {
                 duration: duration,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: Math.random() * 10,
+                delay: Math.random() * 5,
               }}
             />
           );
@@ -223,7 +223,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="relative"
             >
               <motion.h1 
