@@ -76,7 +76,7 @@ export default function About() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0 }}
             className="text-xl text-gray-400 max-w-2xl mx-auto"
           >
             Passionate developer crafting innovative solutions
@@ -89,7 +89,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0 }}
             className="relative flex items-center justify-center"
           >
             {/* Neon glow behind frame - matching gradient colors */}
@@ -148,7 +148,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 0 }}
               className="absolute -bottom-6 -right-6 glass px-6 py-4 rounded-2xl border border-blue-500/30 shadow-2xl"
             >
               <div className="flex items-center gap-3">
@@ -162,7 +162,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0 }}
             className="space-y-8"
           >
             {/* Introduction */}
@@ -170,7 +170,7 @@ export default function About() {
             <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.6, delay: 0 }}
                 className="text-3xl md:text-4xl font-bold text-white font-poppins"
               >
                 I&apos;m{" "}
@@ -180,7 +180,7 @@ export default function About() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.6, delay: 0 }}
                 className="space-y-4 text-gray-300 text-lg leading-relaxed"
               >
                 <p>
@@ -208,7 +208,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              transition={{ duration: 0.6, delay: 0 }}
               className="space-y-4"
             >
               <h4 className="text-xl font-semibold text-white mb-4">Soft Skills:</h4>
@@ -223,7 +223,7 @@ export default function About() {
                     key={item}
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    transition={{ duration: 0.5, delay: 0 }}
                     className="flex items-center gap-3 group cursor-pointer"
                   >
                     <motion.div
@@ -242,7 +242,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1 }}
+              transition={{ duration: 0.6, delay: 0 }}
             >
               <motion.a
                 href="#contact"
@@ -263,7 +263,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.1 }}
+          transition={{ duration: 0.8, delay: 0 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {stats.map((stat, index) => (
@@ -271,7 +271,7 @@ export default function About() {
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+              transition={{ duration: 0.5, delay: 0 }}
               whileHover={{ 
                 scale: 1.05,
                 y: -5,
@@ -289,7 +289,7 @@ export default function About() {
                 className="text-4xl font-bold text-white mb-2"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
+                transition={{ duration: 0.8, delay: 0 }}
               >
                 {stat.value}
               </motion.h4>

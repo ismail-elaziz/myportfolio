@@ -3,17 +3,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
-import { FaGithub } from "react-icons/fa";
-import { SiReddit } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const navItems = [
   { name: "About me", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Activities", href: "#activities" },
   { name: "Certifications", href: "#certifications" },
   { name: "Contact", href: "#contact" },
-  { name: "Blog", href: "#blog" },
-  { name: "Github", href: "https://github.com", external: true },
+  { name: "Github", href: "https://github.com/ismail-elaziz", external: true },
 ];
 
 export default function Navbar() {
@@ -72,21 +71,21 @@ export default function Navbar() {
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-gray-700">
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="https://reddit.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <SiReddit size={24} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.2 }}
-                href="https://github.com"
+                href="https://github.com/ismail-elaziz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
               >
                 <FaGithub size={24} />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://www.linkedin.com/in/ismailelaziz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white"
+              >
+                <FaLinkedin size={24} />
               </motion.a>
             </div>
           </div>

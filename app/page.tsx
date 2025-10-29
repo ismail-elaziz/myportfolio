@@ -8,6 +8,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Activities from "@/components/Activities";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -17,10 +18,10 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Set loaded after preloader finishes (2.5s total)
+    // Set loaded after preloader finishes (1.5s total - faster)
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 2500);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -42,6 +43,7 @@ export default function Home() {
             <Skills />
             <Experience />
             <Projects />
+            <Activities />
             <Certifications />
             <Contact />
             <Footer />

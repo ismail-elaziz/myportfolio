@@ -22,16 +22,16 @@ import { HiSparkles } from "react-icons/hi";
 // Tech icons - Your Custom Tech Stack (optimized delays for faster load)
 const techIcons = [
   { Icon: SiSpringboot, color: "#6DB33F", name: "Spring Boot", delay: 0, size: 54 },
-  { Icon: FaJava, color: "#007396", name: "Java JEE", delay: 0, size: 56 },
-  { Icon: FaAngular, color: "#DD0031", name: "Angular", delay: 0, size: 54 },
-  { Icon: FaReact, color: "#61DAFB", name: "React", delay: 0, size: 54 },
-  { Icon: SiTypescript, color: "#3178C6", name: "TypeScript", delay: 0, size: 52 },
-  { Icon: SiFlutter, color: "#02569B", name: "Flutter", delay: 0, size: 54 },
-  { Icon: SiMysql, color: "#4479A1", name: "MySQL", delay: 0, size: 52 },
-  { Icon: SiMongodb, color: "#47A248", name: "MongoDB", delay: 0, size: 52 },
-  { Icon: SiPostgresql, color: "#4169E1", name: "PostgreSQL", delay: 0, size: 52 },
-  { Icon: SiJavascript, color: "#F7DF1E", name: "JavaScript", delay: 0, size: 52 },
-  { Icon: SiSap, color: "#0FAAFF", name: "SAP", delay: 0, size: 52 },
+  { Icon: FaJava, color: "#007396", name: "Java JEE", delay: 0.03, size: 56 },
+  { Icon: FaAngular, color: "#DD0031", name: "Angular", delay: 0.06, size: 54 },
+  { Icon: FaReact, color: "#61DAFB", name: "React", delay: 0.09, size: 54 },
+  { Icon: SiTypescript, color: "#3178C6", name: "TypeScript", delay: 0.12, size: 52 },
+  { Icon: SiFlutter, color: "#02569B", name: "Flutter", delay: 0.15, size: 54 },
+  { Icon: SiMysql, color: "#4479A1", name: "MySQL", delay: 0.18, size: 52 },
+  { Icon: SiMongodb, color: "#47A248", name: "MongoDB", delay: 0.21, size: 52 },
+  { Icon: SiPostgresql, color: "#4169E1", name: "PostgreSQL", delay: 0.24, size: 52 },
+  { Icon: SiJavascript, color: "#F7DF1E", name: "JavaScript", delay: 0.27, size: 52 },
+  { Icon: SiSap, color: "#0FAAFF", name: "SAP", delay: 0.3, size: 52 },
 ];
 
 export default function Hero() {
@@ -174,7 +174,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="relative"
             >
               <motion.h1 
@@ -228,7 +228,7 @@ export default function Hero() {
                       duration: 8,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 0,
+                      delay: 0.5,
                     }}
                     style={{
                       backgroundSize: '200% 200%',
@@ -244,9 +244,9 @@ export default function Hero() {
                       backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                     }}
                     transition={{ 
-                      x: { duration: 3, repeat: Infinity, delay: 0 },
-                      y: { duration: 3, repeat: Infinity, delay: 0 },
-                      backgroundPosition: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0 },
+                      x: { duration: 3, repeat: Infinity, delay: 0.5 },
+                      y: { duration: 3, repeat: Infinity, delay: 0.5 },
+                      backgroundPosition: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
                     }}
                     style={{
                       backgroundSize: '200% 200%',
@@ -262,7 +262,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               <p className="text-3xl md:text-4xl lg:text-5xl text-white mb-6 font-poppins leading-relaxed">
                 <span className="gradient-text font-bold">Software Development</span>
@@ -275,7 +275,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-wrap gap-6 items-center"
             >
               <motion.a
@@ -303,7 +303,7 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
               className="text-gray-400 italic text-xl flex items-center gap-2"
               style={{ fontFamily: "cursive" }}
             >
@@ -316,7 +316,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-            transition={{ duration: 1.2, delay: 0, ease: "easeOut" }}
+            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
             className="relative hidden lg:flex items-center justify-center w-[700px] h-[700px] flex-shrink-0 lg:ml-auto"
             style={{ perspective: "2000px" }}
           >

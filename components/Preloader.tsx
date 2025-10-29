@@ -18,13 +18,13 @@ export default function Preloader() {
         }
         return prev + 10;
       });
-    }, 150);
+    }, 100);
 
-    // Force finish after 2 seconds max
+    // Force finish after 1.2 seconds max (faster loading)
     const timeout = setTimeout(() => {
       setProgress(100);
-      setTimeout(() => setLoading(false), 500);
-    }, 2000);
+      setTimeout(() => setLoading(false), 300);
+    }, 1200);
 
     return () => {
       clearInterval(interval);

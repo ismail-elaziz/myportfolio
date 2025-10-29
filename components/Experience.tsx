@@ -126,7 +126,7 @@ export default function Experience() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0 }}
             className="text-xl text-gray-400 max-w-2xl mx-auto"
           >
             My professional journey and academic background
@@ -139,7 +139,7 @@ export default function Experience() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0 }}
             className="mb-16"
           >
             <div className="flex items-center gap-4 mb-12">
@@ -161,7 +161,7 @@ export default function Experience() {
                     key={index}
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+                    transition={{ duration: 0.6, delay: 0 }}
                     className="relative pl-24 group"
                   >
                     {/* Timeline dot */}
@@ -224,7 +224,7 @@ export default function Experience() {
                             key={i}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ duration: 0.3, delay: 0.6 + index * 0.2 + i * 0.05 }}
+                            transition={{ duration: 0.3, delay: 0 + i * 0.05 }}
                             whileHover={{ scale: 1.1 }}
                             className="px-3 py-1 rounded-lg bg-slate-800/50 border border-slate-700/50 text-blue-300 text-sm font-medium hover:border-blue-500/50 transition-all duration-300"
                           >
@@ -243,7 +243,7 @@ export default function Experience() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0 }}
           >
             <div className="flex items-center gap-4 mb-12">
               <div className="p-4 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600">
@@ -264,7 +264,7 @@ export default function Experience() {
                     key={index}
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.9 + index * 0.2 }}
+                    transition={{ duration: 0.6, delay: 0 }}
                     className="relative pl-24 group"
                   >
                     {/* Timeline dot */}

@@ -9,7 +9,7 @@ import {
   HiLocationMarker,
   HiCheckCircle,
 } from "react-icons/hi";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -41,7 +41,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0 }}
             className="space-y-8"
           >
             <div>
@@ -56,10 +56,10 @@ export default function Contact() {
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
-                      href="mailto:ismail.elaziz@example.com"
+                      href="mailto:elaziztech@gmail.com"
                       className="text-white hover:text-primary transition-colors"
                     >
-                      ismail.elaziz@example.com
+                      elaziztech@gmail.com
                     </a>
                   </div>
                 </div>
@@ -71,10 +71,10 @@ export default function Contact() {
                   <div>
                     <p className="text-gray-400 text-sm">Phone</p>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+212709770851"
                       className="text-white hover:text-primary transition-colors"
                     >
-                      +1 (234) 567-890
+                      +212 709-770851
                     </a>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">San Francisco, CA</p>
+                    <p className="text-white">Casablanca, Morocco</p>
                   </div>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Contact() {
               <div className="flex gap-4">
                 <motion.a
                   whileHover={{ scale: 1.1, y: -5 }}
-                  href="https://github.com"
+                  href="https://github.com/ismail-elaziz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full glass flex items-center justify-center hover:glow-box transition-all"
@@ -107,21 +107,12 @@ export default function Contact() {
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.1, y: -5 }}
-                  href="https://linkedin.com/in/ismail-el-aziz"
+                  href="https://www.linkedin.com/in/ismailelaziz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full glass flex items-center justify-center hover:glow-box transition-all"
                 >
                   <FaLinkedin size={24} />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -5 }}
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full glass flex items-center justify-center hover:glow-box transition-all"
-                >
-                  <FaTwitter size={24} />
                 </motion.a>
               </div>
             </div>
@@ -131,14 +122,14 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0 }}
             className="glass p-8 rounded-xl flex flex-col justify-center"
           >
             <h3 className="text-2xl font-bold mb-3 text-white">Let&apos;s collaborate</h3>
             <p className="text-gray-300 mb-4">I&apos;m currently available for freelance and full-time opportunities. Feel free to reach out via email or LinkedIn and I&apos;ll respond as soon as possible.</p>
             <div className="flex flex-col sm:flex-row gap-3 mt-4">
-              <a href="mailto:ismail.elaziz@example.com" className="px-5 py-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition">Email me</a>
-              <a href="https://linkedin.com/in/ismail-el-aziz" target="_blank" rel="noreferrer" className="px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg text-white">LinkedIn</a>
+              <a href="mailto:elaziztech@gmail.com" className="px-5 py-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition">Email me</a>
+              <a href="https://www.linkedin.com/in/ismailelaziz/" target="_blank" rel="noreferrer" className="px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg text-white">LinkedIn</a>
             </div>
           </motion.div>
         </div>

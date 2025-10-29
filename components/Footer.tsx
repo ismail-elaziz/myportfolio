@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,11 +25,9 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex items-center gap-2 text-gray-400 text-sm"
+            className="text-gray-400 text-sm"
           >
-            <span>© {currentYear} Ismail Elaziz. Made with</span>
-            <FaHeart className="text-red-500" />
-            <span>and Next.js</span>
+            <span>© {currentYear} Ismail Elaziz</span>
           </motion.div>
 
           {/* Social Links */}
@@ -41,7 +39,7 @@ export default function Footer() {
           >
             <motion.a
               whileHover={{ scale: 1.2, y: -3 }}
-              href="https://github.com"
+              href="https://github.com/ismail-elaziz"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -50,21 +48,12 @@ export default function Footer() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2, y: -3 }}
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ismailelaziz/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <FaLinkedin size={24} />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.2, y: -3 }}
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaTwitter size={24} />
             </motion.a>
           </motion.div>
         </div>
