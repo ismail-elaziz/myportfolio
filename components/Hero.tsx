@@ -299,17 +299,6 @@ export default function Hero() {
               </motion.a>
             </motion.div>
 
-            {/* Handwritten note with glow - BIGGER */}
-            <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0 }}
-              className="text-gray-400 italic text-xl flex items-center gap-2"
-              style={{ fontFamily: "cursive" }}
-            >
-              <HiSparkles className="text-yellow-400" />
-              Read my published blogs.
-            </motion.p>
           </div>
 
           {/* Right side - Animated Tech Icons SVG */}

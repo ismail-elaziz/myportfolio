@@ -14,12 +14,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ismail Elaziz - Data Scientist & Fullstack Developer",
-  description: "Data Scientist & Fullstack Developer providing the best project experience. Building high-performance web solutions with creativity and technology.",
-  keywords: ["Ismail Elaziz", "Data Scientist", "Fullstack Developer", "Portfolio", "Next.js", "React", "TypeScript"],
+  title: "Ismail Elaziz - Software Developer",
+  description: "Software Developer providing the best project experience. Building high-performance web solutions with creativity and technology.",
+  keywords: ["Ismail Elaziz", "Software Developer", "Fullstack Developer", "Portfolio", "Next.js", "React", "TypeScript"],
   authors: [{ name: "Ismail Elaziz" }],
   openGraph: {
-    title: "Ismail Elaziz - Data Scientist & Fullstack Developer",
+    title: "Ismail Elaziz - Software Developer",
     description: "Providing the best project experience",
     type: "website",
     locale: "en_US",
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ismail Elaziz - Portfolio",
     description: "Providing the best project experience",
+  },
+  icons: {
+    icon: '/favicon.svg',
   },
 };
 

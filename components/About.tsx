@@ -8,12 +8,7 @@ export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  const stats = [
-    { label: "Years Experience", value: "5+", icon: HiLightningBolt },
-    { label: "Projects Completed", value: "50+", icon: HiCode },
-    { label: "Technologies", value: "12+", icon: HiSparkles },
-    { label: "Certifications", value: "8+", icon: HiAcademicCap },
-  ];
+  const stats: any[] = [];
 
   return (
     <section
