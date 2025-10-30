@@ -26,7 +26,7 @@ const certifications = [
   },
   {
     title: "Introduction to Java and Object-Oriented Programming",
-    issuer: "IBM / Coursera",
+    issuer: "University of Pennsylvania / Coursera",
     date: "2024",
     category: "Backend",
     color: "from-orange-500 to-red-500",
@@ -62,7 +62,7 @@ const certifications = [
   },
   {
     title: "Solving Problems with Creative and Critical Thinking",
-    issuer: "University of Michigan / Coursera",
+    issuer: "IBM / Coursera",
     date: "2024",
     category: "Soft Skills",
     color: "from-purple-400 to-pink-500",
