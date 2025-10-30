@@ -34,6 +34,15 @@ const certifications = [
     image: "/certif/screen/Introduction to Java and Object-Oriented.png",
   },
   {
+    title: "Programming for Everybody (Getting Started with Python)",
+    issuer: "University of Michigan / Coursera",
+    date: "2024",
+    category: "Backend",
+    color: "from-yellow-500 to-orange-500",
+    link: "https://coursera.org/share/11aef0855a5ed7103a9a57fe52d4ba69",
+    image: "/certif/screen/Programming for Everybody (Getting Started with.png",
+  },
+  {
     title: "React Basics",
     issuer: "Meta / Coursera",
     date: "2024",
@@ -41,6 +50,24 @@ const certifications = [
     color: "from-cyan-500 to-blue-500",
     link: "https://coursera.org/share/93a4fa083e7f5889f6319220bfb1b72d",
     image: "/certif/screen/React Basics.png",
+  },
+  {
+    title: "Interactivity with JavaScript",
+    issuer: "University of Michigan / Coursera",
+    date: "2024",
+    category: "Frontend",
+    color: "from-yellow-400 to-amber-500",
+    link: "https://coursera.org/share/be9fa8576843cff587028a27b14d5171",
+    image: "/certif/screen/Interactivity with JavaScript.png",
+  },
+  {
+    title: "Solving Problems with Creative and Critical Thinking",
+    issuer: "University of Michigan / Coursera",
+    date: "2024",
+    category: "Soft Skills",
+    color: "from-purple-400 to-pink-500",
+    link: "https://coursera.org/share/57b37d5b44f184f5a2c36b67958cca50",
+    image: "/certif/screen/Solving Problems with Creative and Critical.png",
   },
   {
     title: "Introduction to Containers Docker, Kubernetes & OpenShift",
@@ -96,7 +123,7 @@ export default function Certifications() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <motion.a
               key={cert.title}
