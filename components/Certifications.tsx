@@ -123,7 +123,7 @@ export default function Certifications() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (
             <motion.a
               key={cert.title}
@@ -136,11 +136,11 @@ export default function Certifications() {
               className="group relative block overflow-hidden rounded-xl"
             >
               {/* Certificate Screenshot */}
-              <div className="relative aspect-[8.5/11] rounded-xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-white"
                 />
                 
                 {/* Hover Overlay */}
