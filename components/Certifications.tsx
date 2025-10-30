@@ -99,15 +99,12 @@ export default function Certifications() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
-            <motion.a
+            <motion.div
               key={cert.title}
-              href={cert.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative block"
+              className="group relative"
             >
               {/* Certificate Card */}
               <div className="relative aspect-[8.5/11] rounded-xl overflow-hidden glass border border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-300 shadow-2xl">
@@ -149,9 +146,15 @@ export default function Certifications() {
                   </p>
 
                   {/* View Button */}
-                  <div className={`px-6 py-2.5 rounded-lg bg-gradient-to-r ${cert.color} text-white text-sm font-semibold shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105`}>
+                  <a
+                    href={cert.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className={`inline-block px-6 py-2.5 rounded-lg bg-gradient-to-r ${cert.color} text-white text-sm font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105`}
+                  >
                     View Certificate →
-                  </div>
+                  </a>
                 </div>
 
                 {/* Corner Fold Effect */}
@@ -159,7 +162,7 @@ export default function Certifications() {
                   <div className="absolute top-0 right-0 w-0 h-0 border-t-[60px] border-r-[60px] border-t-white/10 border-r-transparent" />
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
