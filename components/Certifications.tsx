@@ -109,24 +109,54 @@ export default function Certifications() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative block"
             >
-              {/* PDF Preview Container */}
-              <div className="relative aspect-[8.5/11] rounded-lg overflow-hidden bg-white shadow-xl">
-                {/* PDF Embed/Preview */}
-                <iframe
-                  src={`${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0`}
-                  className="w-full h-full pointer-events-none"
-                  title={cert.title}
-                />
+              {/* Certificate Card */}
+              <div className="relative aspect-[8.5/11] rounded-xl overflow-hidden glass border border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-300 shadow-2xl">
+                {/* Gradient Background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-20 group-hover:opacity-30 transition-opacity`} />
                 
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${cert.color} text-white mb-2`}>
-                      {cert.category}
-                    </span>
-                    <h3 className="text-white font-bold text-sm mb-1">{cert.title}</h3>
-                    <p className="text-gray-300 text-xs">{cert.issuer} • {cert.date}</p>
+                {/* Paper Lines Effect */}
+                <div className="absolute inset-0 opacity-10">
+                  {[...Array(15)].map((_, i) => (
+                    <div key={i} className="h-[1px] bg-white/30 mb-6 mt-6" />
+                  ))}
+                </div>
+
+                {/* Content */}
+                <div className="relative h-full p-6 flex flex-col items-center justify-center text-center">
+                  {/* Category Badge */}
+                  <div className={`px-4 py-1.5 rounded-full bg-gradient-to-r ${cert.color} text-white text-xs font-bold mb-6 shadow-lg`}>
+                    {cert.category}
                   </div>
+
+                  {/* Certificate Icon */}
+                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${cert.color} flex items-center justify-center shadow-xl mb-6 group-hover:scale-110 transition-transform`}>
+                    <HiAcademicCap size={40} className="text-white" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-white font-bold text-lg mb-3 px-2 leading-tight">
+                    {cert.title}
+                  </h3>
+
+                  {/* Issuer */}
+                  <p className="text-gray-300 text-sm font-medium mb-2">
+                    {cert.issuer}
+                  </p>
+
+                  {/* Date */}
+                  <p className="text-gray-400 text-xs mb-6">
+                    {cert.date}
+                  </p>
+
+                  {/* View Button */}
+                  <div className={`px-6 py-2.5 rounded-lg bg-gradient-to-r ${cert.color} text-white text-sm font-semibold shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105`}>
+                    View Certificate →
+                  </div>
+                </div>
+
+                {/* Corner Fold Effect */}
+                <div className="absolute top-0 right-0 w-16 h-16">
+                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[60px] border-r-[60px] border-t-white/10 border-r-transparent" />
                 </div>
               </div>
             </motion.a>
