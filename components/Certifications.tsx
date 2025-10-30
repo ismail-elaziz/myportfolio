@@ -9,7 +9,7 @@ const certifications = [
   {
     title: "SAP Professional Fundamentals",
     issuer: "SAP",
-    date: "2024",
+    date: "2025",
     category: "SAP",
     color: "from-blue-500 to-cyan-500",
     link: "https://coursera.org/share/54f231efdf90169328c16bddcc73e043",
@@ -18,7 +18,7 @@ const certifications = [
   {
     title: "SAP Technology Consultant Hands-on Project",
     issuer: "SAP",
-    date: "2024",
+    date: "2025",
     category: "SAP",
     color: "from-blue-500 to-cyan-500",
     link: "https://coursera.org/share/beeb06c2e25d8dbfa678cc903de37cf0",
@@ -45,7 +45,7 @@ const certifications = [
   {
     title: "React Basics",
     issuer: "Meta / Coursera",
-    date: "2024",
+    date: "2025",
     category: "Frontend",
     color: "from-cyan-500 to-blue-500",
     link: "https://coursera.org/share/93a4fa083e7f5889f6319220bfb1b72d",
@@ -72,7 +72,7 @@ const certifications = [
   {
     title: "Introduction to Containers Docker, Kubernetes & OpenShift",
     issuer: "IBM / Coursera",
-    date: "2024",
+    date: "2025",
     category: "DevOps",
     color: "from-purple-500 to-indigo-500",
     link: "https://coursera.org/share/1d0bf475b6e9a26086e366042e7c3f8e",
@@ -81,7 +81,7 @@ const certifications = [
   {
     title: "Introduction to DevOps",
     issuer: "IBM / Coursera",
-    date: "2024",
+    date: "2025",
     category: "DevOps",
     color: "from-green-500 to-emerald-500",
     link: "https://coursera.org/share/82b0e2d18fe2e37e4b4620ebc6ba359c",
@@ -90,7 +90,7 @@ const certifications = [
   {
     title: "Continuous Integration and Continuous Delivery",
     issuer: "IBM / Coursera",
-    date: "2024",
+    date: "2025",
     category: "DevOps",
     color: "from-pink-500 to-purple-500",
     link: "https://coursera.org/share/91b6076e911c2199cbe4dd8f5db4f835",
