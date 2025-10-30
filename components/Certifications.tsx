@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { HiAcademicCap, HiDocumentText, HiExternalLink } from "react-icons/hi";
+import { useRef, useState } from "react";
+import { HiAcademicCap, HiDocumentText, HiExternalLink, HiEye, HiDownload } from "react-icons/hi";
 
 const certifications = [
   {
@@ -75,6 +75,7 @@ const certifications = [
 export default function Certifications() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section
@@ -97,64 +98,119 @@ export default function Certifications() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
-            <motion.a
+            <motion.div
               key={cert.title}
-              href={cert.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30, rotateY: -15 }}
               animate={
-                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                isInView ? { opacity: 1, y: 0, rotateY: 0 } : { opacity: 0, y: 30, rotateY: -15 }
               }
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group relative glass p-6 rounded-xl hover:glow-box transition-all duration-300 cursor-pointer overflow-hidden"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="group relative perspective-1000"
             >
-              {/* Gradient background on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-              
-              {/* Category badge */}
-              <div className="flex items-center justify-between mb-4">
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${cert.color} text-white`}>
-                  {cert.category}
-                </span>
-                <motion.div
-                  whileHover={{ rotate: 15 }}
-                  className={`p-2 rounded-lg bg-gradient-to-r ${cert.color} bg-opacity-20`}
-                >
-                  <HiDocumentText className="text-white" size={20} />
-                </motion.div>
-              </div>
-
-              {/* Icon */}
-              <div className="mb-4">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${cert.color} flex items-center justify-center shadow-lg`}>
-                  <HiAcademicCap size={28} className="text-white" />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10">
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
-                  {cert.title}
-                </h3>
-                <p className="text-gray-400 text-sm mb-1 font-medium">{cert.issuer}</p>
-                <p className="text-gray-500 text-xs">{cert.date}</p>
-              </div>
-
-              {/* View PDF link */}
-              <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span>View Certificate</span>
-                <HiExternalLink size={16} />
-              </div>
-
-              {/* Glow effect */}
+              {/* PDF Certificate Card */}
               <motion.div
-                className={`absolute -inset-1 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10 bg-gradient-to-r ${cert.color}`}
+                whileHover={{ y: -10, rotateY: 5 }}
+                transition={{ duration: 0.3 }}
+                className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                {/* PDF Preview Background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-90`}>
+                  {/* Paper texture effect */}
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30" />
+                </div>
+
+                {/* Certificate Content */}
+                <div className="relative h-full p-6 flex flex-col justify-between text-white">
+                  {/* Top Section */}
+                  <div>
+                    {/* Category Badge */}
+                    <motion.div
+                      animate={hoveredIndex === index ? { scale: 1.05 } : { scale: 1 }}
+                      className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-xs font-bold mb-6"
+                    >
+                      {cert.category}
+                    </motion.div>
+
+                    {/* Certificate Icon */}
+                    <motion.div
+                      animate={hoveredIndex === index ? { rotate: 360 } : { rotate: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-20 h-20 mx-auto mb-6 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border-2 border-white/30 shadow-xl"
+                    >
+                      <HiAcademicCap size={40} className="text-white" />
+                    </motion.div>
+                  </div>
+
+                  {/* Middle Section - Title */}
+                  <div className="flex-1 flex items-center justify-center">
+                    <h3 className="text-lg font-bold text-center leading-tight px-2">
+                      {cert.title}
+                    </h3>
+                  </div>
+
+                  {/* Bottom Section */}
+                  <div className="space-y-3">
+                    <div className="text-center">
+                      <p className="text-sm font-semibold opacity-90">{cert.issuer}</p>
+                      <p className="text-xs opacity-70 mt-1">{cert.date}</p>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={hoveredIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                      className="flex gap-2"
+                    >
+                      <a
+                        href={cert.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-white/25 hover:bg-white/35 backdrop-blur-sm rounded-xl border border-white/30 transition-all text-sm font-semibold"
+                      >
+                        <HiEye size={18} />
+                        <span>View</span>
+                      </a>
+                      <a
+                        href={cert.pdf}
+                        download
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-white/90 text-gray-900 rounded-xl transition-all text-sm font-semibold shadow-lg"
+                      >
+                        <HiDownload size={18} />
+                        <span>PDF</span>
+                      </a>
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Corner Decoration */}
+                <div className="absolute top-0 right-0 w-24 h-24">
+                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[60px] border-r-[60px] border-t-white/20 border-r-transparent" />
+                  <HiDocumentText className="absolute top-2 right-2 text-white/60" size={24} />
+                </div>
+
+                {/* Stamp Effect */}
+                <motion.div
+                  animate={hoveredIndex === index ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+                  className="absolute bottom-20 right-6 w-20 h-20 rounded-full border-4 border-white/40 flex items-center justify-center"
+                >
+                  <div className="text-center">
+                    <HiAcademicCap size={24} className="mx-auto mb-1" />
+                    <p className="text-[8px] font-bold">VERIFIED</p>
+                  </div>
+                </motion.div>
+              </motion.div>
+
+              {/* Shadow Effect */}
+              <motion.div
+                animate={hoveredIndex === index ? { opacity: 0.6, scale: 1.05 } : { opacity: 0.3, scale: 1 }}
+                className={`absolute -inset-2 rounded-2xl blur-2xl -z-10 bg-gradient-to-r ${cert.color}`}
               />
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
