@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { HiAcademicCap } from "react-icons/hi";
+import Image from "next/image";
 
 const certifications = [
   {
@@ -137,10 +138,13 @@ export default function Certifications() {
             >
               {/* Certificate Screenshot */}
               <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src={cert.image}
                   alt={cert.title}
+                  width={640}
+                  height={360}
                   className="w-full h-full object-contain bg-white"
+                  loading="lazy"
                 />
                 
                 {/* Hover Overlay */}

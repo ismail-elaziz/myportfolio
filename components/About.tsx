@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { HiCode, HiLightningBolt, HiSparkles, HiAcademicCap } from "react-icons/hi";
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef(null);
@@ -129,10 +130,13 @@ export default function About() {
                 >
                   {/* Image container with white background - NO HOVER EFFECTS */}
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800/50 bg-white">
-                    <img
+                    <Image
                       src="/projects/hero2.png"
                       alt="Ismail Elaziz"
+                      width={320}
+                      height={320}
                       className="w-full h-full object-cover object-top scale-110"
+                      priority
                     />
                   </div>
                 </motion.div>
