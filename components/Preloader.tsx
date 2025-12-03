@@ -20,11 +20,11 @@ export default function Preloader() {
       });
     }, 100);
 
-    // Force finish after 1.2 seconds max (faster loading)
+    // Force finish after 400ms for faster loading
     const timeout = setTimeout(() => {
       setProgress(100);
-      setTimeout(() => setLoading(false), 300);
-    }, 1200);
+      setTimeout(() => setLoading(false), 200);
+    }, 400);
 
     return () => {
       clearInterval(interval);
