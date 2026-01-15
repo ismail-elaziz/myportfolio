@@ -131,7 +131,7 @@ export default function About() {
                   {/* Image container with white background - NO HOVER EFFECTS */}
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800/50 bg-white">
                     <Image
-                      src="/projects/hero2.png"
+                      src="/mephoto.png"
                       alt="Ismail Elaziz"
                       width={320}
                       height={320}

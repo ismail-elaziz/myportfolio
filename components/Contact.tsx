@@ -5,7 +5,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   HiMail,
-  HiPhone,
   HiLocationMarker,
   HiCheckCircle,
 } from "react-icons/hi";
@@ -60,21 +59,6 @@ export default function Contact() {
                       className="text-white hover:text-primary transition-colors"
                     >
                       elaziztech@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <HiPhone size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <a
-                      href="tel:+212709770851"
-                      className="text-white hover:text-primary transition-colors"
-                    >
-                      +212 709-770851
                     </a>
                   </div>
                 </div>
