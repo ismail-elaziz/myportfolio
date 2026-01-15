@@ -35,7 +35,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -44,39 +44,39 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">
                 Contact Information
               </h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <HiMail size={24} className="text-primary" />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <HiMail size={20} className="sm:w-6 sm:h-6 text-primary" />
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
                       href="mailto:elaziztech@gmail.com"
-                      className="text-white hover:text-primary transition-colors"
+                      className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                     >
                       elaziztech@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <HiLocationMarker size={24} className="text-primary" />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <HiLocationMarker size={20} className="sm:w-6 sm:h-6 text-primary" />
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">Casablanca, Morocco</p>
+                    <p className="text-sm sm:text-base text-white">Casablanca, Morocco</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4 text-white">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">
                 Follow Me
               </h3>
               <div className="flex gap-4">

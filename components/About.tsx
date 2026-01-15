@@ -45,7 +45,7 @@ export default function About() {
         />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ export default function About() {
           className="text-center mb-20"
         >
           <motion.h2
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-300 to-white bg-clip-text text-transparent font-poppins"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-blue-300 to-white bg-clip-text text-transparent font-poppins"
             animate={{
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
             }}
@@ -73,14 +73,14 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0 }}
-            className="text-xl text-gray-400 max-w-2xl mx-auto"
+            className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
           >
             Passionate developer crafting innovative solutions
           </motion.p>
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-20">
           {/* Left: Image - CIRCULAR WITH PURPLE NEON GLOW */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -106,7 +106,7 @@ export default function About() {
             />
 
             {/* Main circular container */}
-            <div className="relative w-[500px] h-[500px] lg:w-[600px] lg:h-[600px]">
+            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]">
               {/* Gradient border matching "gradient-text" colors */}
               <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600">
                 {/* Inner circle with animated glow background */}
@@ -148,11 +148,11 @@ export default function About() {
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0 }}
-              className="absolute -bottom-6 -right-6 glass px-6 py-4 rounded-2xl border border-blue-500/30 shadow-2xl"
+              className="absolute -bottom-6 -right-2 sm:-right-6 glass px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-blue-500/30 shadow-2xl"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-white font-semibold">Available for Work</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-white font-semibold text-sm sm:text-base">Available for Work</span>
               </div>
             </motion.div>
           </motion.div>
@@ -170,7 +170,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0 }}
-                className="text-3xl md:text-4xl font-bold text-white font-poppins"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-poppins"
               >
                 I&apos;m{" "}
                 <span className="gradient-text">Ismail Elaziz</span>
@@ -180,7 +180,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0 }}
-                className="space-y-4 text-gray-300 text-lg leading-relaxed"
+                className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed"
               >
                 <p>
                   A passionate <span className="text-blue-400 font-semibold">Software Engineer</span> specializing in{" "}

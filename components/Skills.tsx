@@ -60,7 +60,7 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
@@ -82,7 +82,7 @@ export default function Skills() {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
               
               {/* Card */}
-              <div className="relative glass p-6 rounded-xl flex flex-col items-center justify-center space-y-3 border border-purple-500/20 group-hover:border-cyan-500/50 transition-all duration-300 shadow-lg">
+              <div className="relative glass p-4 sm:p-5 lg:p-6 rounded-xl flex flex-col items-center justify-center space-y-2 sm:space-y-3 border border-purple-500/20 group-hover:border-cyan-500/50 transition-all duration-300 shadow-lg">
                 <motion.div
                   animate={{
                     y: [0, -10, 0],
@@ -95,14 +95,15 @@ export default function Skills() {
                   }}
                 >
                   <skill.icon 
-                    size={52} 
+                    size={40} 
+                    className="sm:w-12 sm:h-12 lg:w-[52px] lg:h-[52px]"
                     style={{ 
                       color: skill.color,
                       filter: 'drop-shadow(0 0 8px currentColor)',
                     }} 
                   />
                 </motion.div>
-                <span className="text-sm font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="text-xs sm:text-sm font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent text-center">
                   {skill.name}
                 </span>
                 

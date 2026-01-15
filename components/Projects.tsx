@@ -100,7 +100,7 @@ export default function Projects() {
       className="py-20 relative overflow-hidden"
       ref={ref}
     >
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -115,7 +115,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -127,7 +127,7 @@ export default function Projects() {
                 duration: 0.6, 
                 delay: index * 0.15,
               }}
-              className="relative group cursor-pointer h-[500px]"
+              className="relative group cursor-pointer h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]"
             >
               {/* Animated gradient glow */}
               <motion.div 
@@ -162,18 +162,18 @@ export default function Projects() {
                 </div>
                 
                 {/* Project info overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-6">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 sm:p-5 lg:p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center font-bold text-white">
                       {(index + 1).toString().padStart(2, '0')}
                     </div>
                     <div className="h-px flex-1 bg-gradient-to-r from-white/50 to-transparent"></div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-2">{project.description}</p>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2">{project.title}</h3>
+                  <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">{project.description}</p>
                   
                   {/* Tech badges with icons */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                     {project.tech.map((tech) => {
                       const IconComponent = techIcons[tech];
                       return (
@@ -189,7 +189,7 @@ export default function Projects() {
                   </div>
                   
                   {/* Action buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 sm:gap-3">
                     {!project.isCMS && project.github && (
                       <motion.a
                         href={project.github}
@@ -197,7 +197,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-white/90 rounded-xl text-gray-900 font-semibold hover:bg-white transition-all"
+                        className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-white/90 rounded-xl text-gray-900 font-semibold hover:bg-white transition-all"
                       >
                         <FaGithub size={18} />
                         <span className="text-sm">Code</span>

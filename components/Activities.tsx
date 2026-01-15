@@ -65,7 +65,7 @@ export default function Activities() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function Activities() {
         </motion.div>
 
         {/* Activities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl mx-auto">
           {activities.map((activity, index) => {
             const activeImageIndex = currentImageIndex[index] || 0;
             
@@ -119,7 +119,7 @@ export default function Activities() {
                 {/* Card */}
                 <div className="relative h-full glass rounded-2xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
                   {/* Image Slider */}
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-48 sm:h-60 lg:h-72 overflow-hidden">
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={`${index}-${activeImageIndex}`}
@@ -172,24 +172,24 @@ export default function Activities() {
                   </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-4 sm:p-5 lg:p-6 space-y-3 sm:space-y-4">
                   {/* Organization Badge */}
                   <div 
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-lg"
+                    className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg"
                     style={{ backgroundColor: activity.brandColor }}
                   >
-                    <span className="text-sm font-bold text-white">
+                    <span className="text-xs sm:text-sm font-bold text-white">
                       {activity.organization}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                     {activity.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                     {activity.description}
                   </p>
                 </div>

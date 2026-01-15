@@ -165,11 +165,11 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="w-full relative z-10">
-        <div className="flex flex-col lg:flex-row justify-start items-center gap-12 lg:gap-16" style={{ paddingLeft: 'clamp(1rem, 10vw, 15rem)' }}>
+      <div className="w-full relative z-10 px-4 sm:px-6">
+        <div className="flex flex-col lg:flex-row justify-start items-center gap-8 lg:gap-16" style={{ paddingLeft: 'clamp(1rem, 5vw, 10rem)' }}>
           
           {/* Left side - Text content */}
-          <div className="text-left space-y-10 w-full lg:w-auto lg:max-w-4xl lg:pr-12">
+          <div className="text-left space-y-6 sm:space-y-8 lg:space-y-10 w-full lg:w-auto lg:max-w-4xl lg:pr-12">
             {/* Name with 3D effect and gradient - MUCH BIGGER */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -178,7 +178,7 @@ export default function Hero() {
               className="relative"
             >
               <motion.h1 
-                className="text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] font-bold mb-6 font-poppins leading-[0.9] relative"
+                className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] xl:text-[12rem] font-bold mb-4 sm:mb-6 font-poppins leading-[0.9] relative"
                 whileHover={{ scale: 1.02 }}
               >
                 <span className="relative inline-block">
@@ -264,7 +264,7 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0 }}
             >
-              <p className="text-3xl md:text-4xl lg:text-5xl text-white mb-6 font-poppins leading-relaxed">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white mb-4 sm:mb-6 font-poppins leading-relaxed">
                 <span className="gradient-text font-bold">Software Development</span>
                 <br />
                 <span className="text-white">& SAP Enthusiast</span>
@@ -276,13 +276,13 @@ export default function Hero() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0 }}
-              className="flex flex-wrap gap-6 items-center"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 items-stretch sm:items-center"
             >
               <motion.a
                 href="#projects"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="px-10 py-5 text-xl rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 font-semibold text-white shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center gap-2"
+                className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 font-semibold text-white shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center gap-2"
               >
                 View Projects
                 <HiSparkles />
@@ -292,11 +292,78 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="px-10 py-5 text-xl rounded-xl glass border border-slate-500/40 font-medium text-gray-200 hover:border-indigo-500/50 hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl rounded-xl glass border border-slate-500/40 font-medium text-gray-200 hover:border-indigo-500/50 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get in Touch
                 <span>→</span>
               </motion.a>
+            </motion.div>
+
+            {/* Mobile-only Tech Stack Showcase - Creative horizontal scroll */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="xl:hidden w-full mt-8"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+                <span className="text-sm text-gray-400 font-medium">Tech Stack</span>
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+              </div>
+              
+              {/* Horizontal scrolling container */}
+              <div className="relative overflow-hidden">
+                {/* Gradient overlays for scroll indication */}
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#050510] to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#050510] to-transparent z-10 pointer-events-none" />
+                
+                <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory px-1">
+                  {techIcons.map((tech, index) => (
+                    <motion.div
+                      key={tech.name}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-shrink-0 snap-center"
+                    >
+                      <div className="relative group">
+                        {/* Glow effect */}
+                        <motion.div
+                          className="absolute -inset-1 rounded-2xl blur-lg opacity-0 group-active:opacity-60 transition-opacity"
+                          style={{ background: tech.color }}
+                        />
+                        
+                        {/* Card */}
+                        <div className="relative glass p-4 rounded-2xl border border-slate-700/50 group-active:border-cyan-500/50 transition-all min-w-[90px] flex flex-col items-center gap-2">
+                          <motion.div
+                            animate={{
+                              y: [0, -5, 0],
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              delay: index * 0.1,
+                            }}
+                          >
+                            <tech.Icon 
+                              size={36}
+                              style={{ 
+                                color: tech.color,
+                                filter: `drop-shadow(0 0 6px ${tech.color}80)`,
+                              }} 
+                            />
+                          </motion.div>
+                          <span className="text-[10px] font-bold text-center leading-tight" style={{ color: tech.color }}>
+                            {tech.name}
+                          </span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
           </div>
@@ -306,7 +373,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
             transition={{ duration: 1.2, delay: 0, ease: "easeOut" }}
-            className="relative hidden lg:flex items-center justify-center w-[700px] h-[700px] flex-shrink-0 lg:ml-auto"
+            className="relative hidden xl:flex items-center justify-center w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] 2xl:w-[700px] 2xl:h-[700px] flex-shrink-0 lg:ml-auto"
             style={{ perspective: "2000px" }}
           >
             {/* Animated connecting paths between icons */}

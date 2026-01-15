@@ -99,7 +99,7 @@ export default function Experience() {
         />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ export default function Experience() {
           className="text-center mb-20"
         >
           <motion.h2
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-300 to-white bg-clip-text text-transparent font-poppins"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-blue-300 to-white bg-clip-text text-transparent font-poppins"
             animate={{
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
             }}
@@ -127,7 +127,7 @@ export default function Experience() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0 }}
-            className="text-xl text-gray-400 max-w-2xl mx-auto"
+            className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto"
           >
             My professional journey and academic background
           </motion.p>
@@ -142,18 +142,18 @@ export default function Experience() {
             transition={{ duration: 0.6, delay: 0 }}
             className="mb-16"
           >
-            <div className="flex items-center gap-4 mb-12">
-              <div className="p-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600">
-                <HiBriefcase className="text-white text-3xl" />
+            <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
+              <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600">
+                <HiBriefcase className="text-white text-2xl sm:text-3xl" />
               </div>
-              <h3 className="text-4xl font-bold text-white font-poppins">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-poppins">
                 Professional Experience
               </h3>
             </div>
 
             <div className="relative">
               {/* Vertical line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-indigo-500 to-transparent" />
+              <div className="absolute left-3 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-indigo-500 to-transparent" />
 
               <div className="space-y-12">
                 {experiences.map((exp, index) => (
@@ -162,11 +162,11 @@ export default function Experience() {
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0 }}
-                    className="relative pl-24 group"
+                    className="relative pl-10 sm:pl-16 lg:pl-24 group"
                   >
                     {/* Timeline dot */}
                     <motion.div
-                      className={`absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-r ${exp.color} border-4 border-[#050510]`}
+                      className={`absolute left-1.5 sm:left-6 top-6 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-r ${exp.color} border-2 sm:border-4 border-[#050510]`}
                       whileHover={{ scale: 1.5 }}
                       transition={{ duration: 0.3 }}
                     />
@@ -175,12 +175,12 @@ export default function Experience() {
                     <motion.div
                       whileHover={{ x: 10, scale: 1.02 }}
                       transition={{ duration: 0.3 }}
-                      className="glass p-6 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+                      className="glass p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                     >
                       {/* Header */}
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                         <div className="flex-1">
-                          <h4 className="text-2xl font-bold text-white mb-2">
+                          <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
                             {exp.title}
                           </h4>
                           <div className="flex items-center gap-3 text-blue-400 mb-2">
@@ -213,7 +213,7 @@ export default function Experience() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed">
                         {exp.description}
                       </p>
 
@@ -245,9 +245,9 @@ export default function Experience() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0 }}
           >
-            <div className="flex items-center gap-4 mb-12">
-              <div className="p-4 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600">
-                <HiAcademicCap className="text-white text-3xl" />
+            <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
+              <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600">
+                <HiAcademicCap className="text-white text-2xl sm:text-3xl" />
               </div>
               <h3 className="text-4xl font-bold text-white font-poppins">
                 Education
