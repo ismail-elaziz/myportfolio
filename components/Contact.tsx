@@ -56,42 +56,10 @@ export default function Contact() {
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
-                      href="mailto:elazizcontact@gmail.com"
+                      href="mailto:elaziztech@gmail.com"
                       className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                     >
-                      elazizcontact@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <HiPhone size={20} className="sm:w-6 sm:h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <a
-                      href="tel:+212608204322"
-                      className="text-sm sm:text-base text-white hover:text-primary transition-colors"
-                    >
-                      +212 6 08-20 43 22
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <HiGlobeAlt size={20} className="sm:w-6 sm:h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Website</p>
-                    <a
-                      href="https://elaziz.tech"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm sm:text-base text-white hover:text-primary transition-colors"
-                    >
-                      elaziz.tech
+                      elaziztech@gmail.com
                     </a>
                   </div>
                 </div>
@@ -145,7 +113,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold mb-3 text-white">Let&apos;s collaborate</h3>
             <p className="text-gray-300 mb-4">I&apos;m currently available for full-time, consulting, and freelance opportunities. Feel free to contact me for collaboration, product development, or technical consulting.</p>
             <div className="flex flex-col sm:flex-row gap-3 mt-4">
-              <a href="mailto:elazizcontact@gmail.com" className="px-5 py-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition">Email me</a>
+              <a href="mailto:elaziztech@gmail.com" className="px-5 py-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition">Email me</a>
               <a href="https://www.linkedin.com/in/ismailelaziz/" target="_blank" rel="noreferrer" className="px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg text-white">LinkedIn</a>
             </div>
           </motion.div>
