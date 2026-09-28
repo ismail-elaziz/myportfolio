@@ -9,6 +9,7 @@ import {
   FaAngular,
   FaDocker,
   FaGitAlt,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -17,26 +18,37 @@ import {
   SiMongodb,
   SiPostgresql,
   SiMysql,
-  SiFlutter,
-  SiKubernetes,
+  SiDotnet,
   SiSap,
+  SiGit,
+  SiPostman,
 } from "react-icons/si";
 
 const skills = [
+  { name: "Java", icon: FaJava, color: "#007396", category: "Backend" },
+  { name: "Java EE", icon: FaJava, color: "#007396", category: "Backend" },
   { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F", category: "Backend" },
-  { name: "Java JEE", icon: FaJava, color: "#007396", category: "Backend" },
+  { name: "Spring Cloud", icon: SiSpringboot, color: "#6DB33F", category: "Backend" },
+  { name: ".NET", icon: SiDotnet, color: "#512BD4", category: "Backend" },
+  { name: "ASP.NET Core", icon: SiDotnet, color: "#512BD4", category: "Backend" },
+  { name: "ASP.NET MVC", icon: SiDotnet, color: "#512BD4", category: "Backend" },
   { name: "Angular", icon: FaAngular, color: "#DD0031", category: "Frontend" },
   { name: "React", icon: FaReact, color: "#61DAFB", category: "Frontend" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6", category: "Frontend" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", category: "Frontend" },
-  { name: "Flutter", icon: SiFlutter, color: "#02569B", category: "Mobile" },
+  { name: "REST APIs", icon: SiPostman, color: "#FF6C37", category: "Integration" },
+  { name: "SAP Commerce Cloud", icon: SiSap, color: "#0FAAFF", category: "SAP" },
+  { name: "SAP Hybris", icon: SiSap, color: "#0FAAFF", category: "SAP" },
   { name: "MySQL", icon: SiMysql, color: "#4479A1", category: "Database" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248", category: "Database" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", category: "Database" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248", category: "Database" },
+  { name: "SQL Server", icon: SiMysql, color: "#CC2927", category: "Database" },
+  { name: "Git", icon: SiGit, color: "#F05032", category: "DevOps" },
+  { name: "GitHub", icon: FaGithub, color: "#181717", category: "DevOps" },
   { name: "Docker", icon: FaDocker, color: "#2496ED", category: "DevOps" },
-  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5", category: "DevOps" },
-  { name: "Git", icon: FaGitAlt, color: "#F05032", category: "DevOps" },
-  { name: "SAP", icon: SiSap, color: "#0FAAFF", category: "Backend" },
+  { name: "CI/CD", icon: FaGitAlt, color: "#F05032", category: "DevOps" },
+  { name: "Agile", icon: FaGitAlt, color: "#F59E0B", category: "Methodology" },
+  { name: "Scrum", icon: FaGitAlt, color: "#10B981", category: "Methodology" },
 ];
 
 export default function Skills() {

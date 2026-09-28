@@ -265,9 +265,9 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0 }}
             >
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white mb-4 sm:mb-6 font-poppins leading-relaxed">
-                <span className="gradient-text font-bold">Software Development</span>
+                <span className="gradient-text font-bold">Full-Stack Engineer</span>
                 <br />
-                <span className="text-white">& SAP Enthusiast</span>
+                <span className="text-white">Java • .NET • SAP</span>
               </p>
             </motion.div>
 

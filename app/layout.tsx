@@ -20,21 +20,21 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Ismail Elaziz - Software Developer",
-  description: "Software Developer providing the best project experience. Building high-performance web solutions with creativity and technology.",
-  keywords: ["Ismail Elaziz", "Software Developer", "Fullstack Developer", "Portfolio", "Next.js", "React", "TypeScript"],
+  title: "Ismail Elaziz - Ingénieur Informatique Full-Stack",
+  description: "Ingénieur Informatique Full-Stack spécialisé en Java, Spring Boot, SAP Hybris, .NET, Angular et React.",
+  keywords: ["Ismail Elaziz", "Ingénieur Informatique", "Full Stack Developer", "SAP Hybris", "Java", "Spring Boot", "Angular", "React", "Portfolio"],
   authors: [{ name: "Ismail Elaziz" }],
   openGraph: {
-    title: "Ismail Elaziz - Software Developer",
-    description: "Providing the best project experience",
+    title: "Ismail Elaziz - Ingénieur Informatique Full-Stack",
+    description: "Consultant technique SAP Hybris et développeur Full Stack",
     type: "website",
-    locale: "en_US",
+    locale: "fr_FR",
     siteName: "Ismail Elaziz Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Ismail Elaziz - Portfolio",
-    description: "Providing the best project experience",
+    description: "Consultant technique SAP Hybris et développeur Full Stack",
   },
   icons: {
     icon: '/favicon.svg',

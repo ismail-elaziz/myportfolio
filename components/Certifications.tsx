@@ -8,94 +8,58 @@ import Image from "next/image";
 
 const certifications = [
   {
-    title: "SAP Professional Fundamentals",
-    issuer: "SAP",
-    date: "2025",
+    title: "SAP Commerce Cloud Bootcamp 2026",
+    issuer: "Udemy",
+    date: "2026",
     category: "SAP",
     color: "from-blue-500 to-cyan-500",
-    link: "https://coursera.org/share/54f231efdf90169328c16bddcc73e043",
-    image: "/certif/screen/SAP Professional Fundamentals.png",
-  },
-  {
-    title: "SAP Technology Consultant Hands-on Project",
-    issuer: "SAP",
-    date: "2025",
-    category: "SAP",
-    color: "from-blue-500 to-cyan-500",
-    link: "https://coursera.org/share/beeb06c2e25d8dbfa678cc903de37cf0",
-    image: "/certif/screen/SAP Technology Consultant Hands-on Project.png",
+    link: "https://www.udemy.com",
+    image: null,
   },
   {
     title: "Introduction to Java and Object-Oriented Programming",
-    issuer: "University of Pennsylvania / Coursera",
-    date: "2024",
+    issuer: "Oracle / Coursera",
+    date: "2025",
     category: "Backend",
     color: "from-orange-500 to-red-500",
-    link: "https://coursera.org/share/3cd2bb933747b4c12f4ff1f95d82b61f",
-    image: "/certif/screen/Introduction to Java and Object-Oriented.png",
+    link: "https://www.coursera.org",
+    image: null,
   },
   {
-    title: "Programming for Everybody (Getting Started with Python)",
-    issuer: "University of Michigan / Coursera",
-    date: "2024",
-    category: "Backend",
-    color: "from-yellow-500 to-orange-500",
-    link: "https://coursera.org/share/11aef0855a5ed7103a9a57fe52d4ba69",
-    image: "/certif/screen/Programming for Everybody (Getting Started with.png",
+    title: "Oracle Cloud Infrastructure 2025 Certified DevOps Professional",
+    issuer: "Oracle",
+    date: "2025",
+    category: "DevOps",
+    color: "from-purple-500 to-indigo-500",
+    link: "https://www.oracle.com/cloud/",
+    image: null,
   },
   {
-    title: "React Basics",
+    title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift",
+    issuer: "IBM / Coursera",
+    date: "2025",
+    category: "DevOps",
+    color: "from-violet-500 to-indigo-500",
+    link: "https://www.coursera.org",
+    image: null,
+  },
+  {
+    title: "Continuous Integration and Continuous Delivery (CI/CD)",
+    issuer: "IBM / Coursera",
+    date: "2025",
+    category: "DevOps",
+    color: "from-emerald-500 to-teal-500",
+    link: "https://www.coursera.org",
+    image: null,
+  },
+  {
+    title: "React Basic",
     issuer: "Meta / Coursera",
     date: "2025",
     category: "Frontend",
     color: "from-cyan-500 to-blue-500",
-    link: "https://coursera.org/share/93a4fa083e7f5889f6319220bfb1b72d",
-    image: "/certif/screen/React Basics.png",
-  },
-  {
-    title: "Interactivity with JavaScript",
-    issuer: "University of Michigan / Coursera",
-    date: "2024",
-    category: "Frontend",
-    color: "from-yellow-400 to-amber-500",
-    link: "https://coursera.org/share/be9fa8576843cff587028a27b14d5171",
-    image: "/certif/screen/Interactivity with JavaScript.png",
-  },
-  {
-    title: "Solving Problems with Creative and Critical Thinking",
-    issuer: "IBM / Coursera",
-    date: "2024",
-    category: "Soft Skills",
-    color: "from-purple-400 to-pink-500",
-    link: "https://coursera.org/share/57b37d5b44f184f5a2c36b67958cca50",
-    image: "/certif/screen/Solving Problems with Creative and Critical.png",
-  },
-  {
-    title: "Introduction to Containers Docker, Kubernetes & OpenShift",
-    issuer: "IBM / Coursera",
-    date: "2025",
-    category: "DevOps",
-    color: "from-purple-500 to-indigo-500",
-    link: "https://coursera.org/share/1d0bf475b6e9a26086e366042e7c3f8e",
-    image: "/certif/screen/Introduction to Containers Docker, Kubernetes.png",
-  },
-  {
-    title: "Introduction to DevOps",
-    issuer: "IBM / Coursera",
-    date: "2025",
-    category: "DevOps",
-    color: "from-green-500 to-emerald-500",
-    link: "https://coursera.org/share/82b0e2d18fe2e37e4b4620ebc6ba359c",
-    image: "/certif/screen/Introduction to DevOps.png",
-  },
-  {
-    title: "Continuous Integration and Continuous Delivery",
-    issuer: "IBM / Coursera",
-    date: "2025",
-    category: "DevOps",
-    color: "from-pink-500 to-purple-500",
-    link: "https://coursera.org/share/91b6076e911c2199cbe4dd8f5db4f835",
-    image: "/certif/screen/Continuous Integration and Continuous Delivery.png",
+    link: "https://www.coursera.org",
+    image: null,
   },
 ];
 
@@ -137,16 +101,29 @@ export default function Certifications() {
               className="group relative block overflow-hidden rounded-xl"
             >
               {/* Certificate Screenshot */}
-              <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
-                <Image
-                  src={cert.image}
-                  alt={cert.title}
-                  width={640}
-                  height={360}
-                  className="w-full h-full object-contain bg-white"
-                  loading="lazy"
-                />
-                
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-2xl bg-slate-900">
+                {cert.image ? (
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    width={640}
+                    height={360}
+                    className="w-full h-full object-contain bg-white"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center p-8 text-center">
+                    <div className="space-y-2">
+                      <div className={`inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r ${cert.color} text-white text-xs font-bold shadow-lg`}>
+                        {cert.category}
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                        {cert.title}
+                      </h3>
+                    </div>
+                  </div>
+                )}
+
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

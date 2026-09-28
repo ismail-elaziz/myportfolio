@@ -166,14 +166,13 @@ export default function About() {
           >
             {/* Introduction */}
             <div className="space-y-6">
-            <motion.h3
+              <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0 }}
                 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-poppins"
               >
-                I&apos;m{" "}
-                <span className="gradient-text">Ismail Elaziz</span>
+                I&apos;m <span className="gradient-text">Ismail Elaziz</span>
               </motion.h3>
 
               <motion.div
@@ -183,22 +182,23 @@ export default function About() {
                 className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed"
               >
                 <p>
-                  A passionate <span className="text-blue-400 font-semibold">Software Engineer</span> specializing in{" "}
-                  <span className="text-blue-400 font-semibold">Full Stack Development</span>,{" "}
-                  <span className="text-blue-400 font-semibold">DevOps</span>, and{" "}
-                  <span className="text-blue-400 font-semibold">SAP Integration</span>.
+                  <span className="text-blue-400 font-semibold">Ingénieur Informatique</span> et
+                  <span className="text-blue-400 font-semibold"> Full-Stack Developer</span> passionné par la
+                  conception et le développement de solutions numériques fiables, évolutives et orientées
+                  business.
                 </p>
                 <p>
-                  I specialize in building scalable, high-performance applications using modern technologies like{" "}
-                  <span className="text-indigo-400">React</span>, <span className="text-indigo-400">Angular</span>,{" "}
-                  <span className="text-indigo-400">Spring Boot</span>, <span className="text-indigo-400">Spring Cloud</span>,
-                  and <span className="text-indigo-400">Flutter</span>. My expertise spans the entire development lifecycle,
-                  from architecture design to deployment and maintenance.
+                  J&apos;ai contribué à des projets d&apos;entreprise pour <span className="text-indigo-400">Poste Maroc</span>{" "}
+                  et <span className="text-indigo-400">Poste Tunisienne</span>, en couvrant le backend,
+                  l&apos;évolution applicative et l&apos;intégration SI. Mon expertise s&apos;étend à Java 17,
+                  Spring Boot, SAP Commerce Cloud, SAP Hybris, .NET, Angular, React, REST APIs, SQL et
+                  l&apos;architecture MVC.
                 </p>
                 <p>
-                  With a strong foundation in both frontend and backend technologies, I create elegant solutions
-                  that solve complex business problems. I&apos;m driven by innovation, quality code, and delivering
-                  exceptional user experiences that make a real impact.
+                  Je conçois des applications métier complètes, améliore les processus via l&apos;automatisation,
+                  et mets en place des solutions qui réduisent les tâches manuelles et renforcent la stabilité
+                  applicative. Je suis motivé par la qualité du code, la collaboration Agile et la livraison de
+                  valeur concrète.
                 </p>
               </motion.div>
             </div>
@@ -210,13 +210,13 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0 }}
               className="space-y-4"
             >
-              <h4 className="text-xl font-semibold text-white mb-4">Soft Skills:</h4>
+              <h4 className="text-xl font-semibold text-white mb-4">Soft Skills</h4>
               <div className="space-y-3">
                 {[
-                  "Adaptability & Flexibility",
-                  "Time Management",
-                  "Team Collaboration",
-                  "Active Listening",
+                  "Adaptabilité",
+                  "Gestion du temps",
+                  "Travail d'équipe",
+                  "Sens de l'écoute",
                 ].map((item, index) => (
                   <motion.div
                     key={item}
